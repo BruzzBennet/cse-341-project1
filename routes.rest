@@ -1,0 +1,36 @@
+//See all
+GET http://localhost:3000/users
+
+###
+//Search by ID
+GET http://localhost:3000/users/68bc8f644a370d078b888d9f
+
+###
+//Create User
+POST http://localhost:3000/users HTTP/1.1
+content-type: application/json
+
+{
+    "firstName": "Esther",
+    "lastName": "Cortes",
+    "email": "teteowo@gmail.com",
+    "favoriteColor": "white",
+    "birthday": "4/19/2006"
+}
+
+###
+//Update User
+PUT http://localhost:3000/users/68c62e11ca63a1c951d4c1e8 HTTP/1.1
+content-type: application/json
+
+{
+    "firstName": "Esther",
+    "lastName": "Cortes",
+    "email": "teteowo@gmail.com",
+    "favoriteColor": "beige",
+    "birthday": "4/19/2006"
+}
+
+###
+//Delete User
+DELETE http://localhost:3000/users/68c62e78ca63a1c951d4c1ea
